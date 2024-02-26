@@ -1,13 +1,13 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="the-littlest-jupyterhub",
+    name="the-littlest-jupyterhub-docker",
     version="1.0.1.dev",
-    description="A small JupyterHub distribution",
-    url="https://github.com/jupyterhub/the-littlest-jupyterhub",
-    author="Jupyter Development Team",
-    author_email="jupyter@googlegroups.com",
-    license="3 Clause BSD",
+    description="A small JupyterHub distribution that spawns user servers in individual Docker containers",
+    url="https://github.com/fabiansalamo/the-littlest-jupyterhub-docker",
+    author="Fabian Salamo",
+    author_email="fabian278@gmail.com",
+    license="MIT",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -18,6 +18,7 @@ setup(
         "requests",
         "bcrypt",
         "jupyterhub-traefik-proxy==1.*",
+        "docker"
     ],
     entry_points={
         "console_scripts": [
